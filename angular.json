@@ -59,7 +59,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "rock-paper-scissors:build:production"
+              "browserTarget": "rock-paper-scissors:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
