@@ -16,21 +16,19 @@ From server, run `npm install` to install dependencies for the server.
 
 Write your Angular source code in the /src folder.
 
-You can run the node server by moving to the server directory and running `npm start`
+You can run the node server by moving to the `server` directory and running `npm start` which will run the node server at http://localhost:3000 (this houses our API.)
 
-The Angular Development Server can be started by running `ng serve`
-
-Endpoints are configured to proxy to the node server, which is running on http://localhost:3000. The Angular App will be running on http://localhost:4200 The proxy is setup to send `/api/[endpoint]` to the server. Keep this in mind while in development.
+The Angular Development Server can be started by running `ng serve` which will serve the Angular application on http://localhost:4200
 
 # Building
 
 Build your project using `ng build` from the root
 
-To start the server, run `npm start` in the server folder. You can access the game's GUI at `http://localhost:3000`
+To start the server, run `npm start` in the server folder. You can access the game's GUI at `http://localhost:3000` and the node server will serve a static Angular app.
 
 ## The API
 
-To play the game, make a POST request to `http://localhost:3000/match` with a single body parameter, `choice`, the value of which should be either "rock", "paper", or "scissors". The server will randomly choose one of those three options to play against your choice and return the results of the game as a JSON object with the following properties:
+To play the game, make a POST request to `http://localhost:3000/api/match` with a single body parameter, `choice`, the value of which should be either "rock", "paper", or "scissors". The server will randomly choose one of those three options to play against your choice and return the results of the game as a JSON object with the following properties:
 
     playerChoice   : [your choice]
     computerChoice : [rock|paper|scissors]
@@ -40,11 +38,11 @@ The server will return a status of 400 if the `choice` parameter is omitted or d
 
 You can test the API using cURL thusly:
 
-    $ curl -X POST -d choice=[rock|paper|scissors] http://localhost:3000/match
+    $ curl -X POST -d choice=[rock|paper|scissors] http://localhost:3000/api/match
 
 ## The GUI
 
-All front end assets can be found in the `public` directory. Please use a AngularJS to build a single page application for playing the game. You may structure your Angular app as you like and you may add to or modify any of the code in here. Visually, the design does not have to be perfect, but the game should look presentable.
+All front end assets can be found in the `src/assets` directory. Please use a Angular to build a single page application for playing the game. You may structure your Angular app as you like and you may add to or modify any of the code in here. Visually, the design does not have to be perfect, but the game should look presentable.
 
 #### Requirements
 

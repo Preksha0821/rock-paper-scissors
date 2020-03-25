@@ -55,8 +55,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rock-paper-scissors:build",
-            "proxyConfig": "src/proxy.conf.json"
+            "browserTarget": "rock-paper-scissors:build"
           },
           "configurations": {
             "production": {
