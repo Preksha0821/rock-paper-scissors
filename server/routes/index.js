@@ -13,7 +13,7 @@ router.post("/match", function(req, res, next){
     var playerChoice = req.body.choice || "";
     playerChoice = playerChoice.toLowerCase();
 
-    if (!_.contains(['rock', 'paper', 'scissors'], playerChoice)) {
+    if (!_.includes(['rock', 'paper', 'scissors'], playerChoice)) {
       status = 400;
       body = { message: "'choice' param must be rock, paper, or scissors" }
       return res.status(status).json(body);
