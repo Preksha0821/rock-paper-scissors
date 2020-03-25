@@ -20,7 +20,7 @@ You can run the node server by moving to the server directory and running `npm s
 
 The Angular Development Server can be started by running `ng serve`
 
-Endpoints are configured to proxy to the node server.
+Endpoints are configured to proxy to the node server, which is running on http://localhost:3000. The Angular App will be running on http://localhost:4200 The proxy is setup to send `/api/[endpoint]` to the server. Keep this in mind while in development.
 
 # Building
 
