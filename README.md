@@ -1,6 +1,6 @@
 # RockPaperScissors
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
 This repository contains a simple server for playing Rock Paper Scissors. You will be building a client-side GUI to play the game against the server.
 
