@@ -10,11 +10,11 @@ To get the Angular CLI installed, run `npm install -g @angular/cli`
 
 From the root, run `npm install` to install dependencies.
 
-From server, run `npm install` to install dependencies for the server.
+From the `server` directory, run `npm install` to install dependencies for the server.
 
 # Running the App in Development Mode
 
-Write your Angular source code in the /src folder.
+Write your Angular source code in the `src` folder.
 
 You can run the node server by moving to the `server` directory and running `npm start` which will run the node server at http://localhost:3000 (this houses our API.)
 
@@ -24,7 +24,7 @@ The Angular Development Server can be started by running `ng serve` which will s
 
 Build your project using `ng build` from the root
 
-To start the server, run `npm start` in the server folder. You can access the game's GUI at `http://localhost:3000` and the node server will serve a static Angular app.
+To start the server, run `npm start` in the `server` directory. You can access the game's GUI at `http://localhost:3000` and the node server will serve a static Angular app.
 
 ## The API
 
@@ -42,7 +42,7 @@ You can test the API using cURL thusly:
 
 ## The GUI
 
-All front end assets can be found in the `src/assets` directory. Please use a Angular to build a single page application for playing the game. You may structure your Angular app as you like and you may add to or modify any of the code in here. Visually, the design does not have to be perfect, but the game should look presentable.
+All front end assets can be found in the `src/assets` directory. Please use an Angular version 6+ to build a single page application for playing the game. You may structure your Angular app as you like and you may add to or modify any of the code in here. Visually, the design does not have to be perfect, but the game should look presentable.
 
 #### Requirements
 
