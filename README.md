@@ -12,9 +12,17 @@ From the root, run `npm install` to install dependencies.
 
 From server, run `npm install` to install dependencies for the server.
 
-# Building and running
+# Running the App in Development Mode
 
 Write your Angular source code in the /src folder.
+
+You can run the node server by moving to the server directory and running `npm start`
+
+The Angular Development Server can be started by running `ng serve`
+
+Endpoints are configured to proxy to the node server.
+
+# Building
 
 Build your project using `ng build` from the root
 
