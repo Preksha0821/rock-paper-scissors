@@ -20,12 +20,6 @@ You can run the node server by moving to the `server` directory and running `npm
 
 The Angular Development Server can be started by running `ng serve` which will serve the Angular application on http://localhost:4200
 
-# Building
-
-Build your project using `ng build` from the root
-
-To start the server, run `npm start` in the `server` directory. You can access the game's GUI at `http://localhost:3000` and the node server will serve a static Angular app.
-
 ## The API
 
 To play the game, make a POST request to `http://localhost:3000/api/match` with a single body parameter, `choice`, the value of which should be either "rock", "paper", or "scissors". The server will randomly choose one of those three options to play against your choice and return the results of the game as a JSON object with the following properties:
