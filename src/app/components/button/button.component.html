@@ -1,0 +1,12 @@
+<ng-container [ngSwitch]="buttonType">
+  <div class="app-button" *ngSwitchCase="'primary'">
+    <span class="app-button__label app-button__label--primary">{{label}}</span>
+    <img class="app-button__image" [src]="imagePath" [alt]=label />
+  </div>
+
+  <div class="app-button" *ngSwitchCase="'secondary'">
+    <span class="app-button__label app-button__label--secondary">{{label}}</span>
+    <img class="app-button__image" [src]="imagePath" [alt]=label />
+  </div>
+</ng-container>
+

@@ -1,0 +1,78 @@
+$white: #fff;
+$black: #4b4e52;
+$green: #c1ebda;
+$red: #ff0000;
+
+.app {
+  padding: 20px;
+  background: $green;
+
+  &__title {
+    font-family: "Calibri Light", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  &__description {
+    font-family: "Calibri Light", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  &__error {
+    font-family: "Calibri Light", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: red;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__button {
+    max-width: 180px;
+    margin-right: 20px;
+  }
+
+  &__result {
+    padding: 30px;
+  }
+
+  &__text {
+    font-family: "Calibri Light", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+
+    &--label {
+      margin-right: 20px;
+    }
+
+    &--value {
+      font-weight: bold;
+    }
+  }
+}
+
+@media all and (max-width: 576px){
+  .app {
+    &__buttons {
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    &__button {
+      margin: 10px 0;
+    }
+  }
+}

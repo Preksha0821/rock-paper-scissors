@@ -1,0 +1,16 @@
+{
+  "gameText":{
+    "welcomeText": "Welcome to the Rock Paper Scissors Game!",
+    "description": "Please select 1 of the 3 options and click play.",
+    "playBtn": "Play",
+    "playerSelection": "You have selected:",
+    "playerChoice": "Your Choice:",
+    "computerChoice": "Computer's Choice:",
+    "results": "Results:",
+    "playerScore": "Your Score:",
+    "computerScore": "Computer Score:",
+    "pickOneText": "Please select your choice to play the game.",
+    "apiFailure": "Something went wrong. Please try again.",
+    "gameResults": "Game Results:"
+  }
+}

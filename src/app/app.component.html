@@ -1,7 +1,52 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<div class="app" *ngIf="game$ | async as game">
+  <div class="app__title">{{gameText.welcomeText}}</div>
+  <div class="app__description">{{gameText.description}}</div>
+  <div class="app__buttons">
+    <ng-container *ngFor="let button of buttons">
+      <app-button label={{button.label}}
+                  imagePath={{button.imagePath}}
+                  buttonType="{{button.buttonType}}"
+                  class="app__button"
+                  (click)="onSelection(button.id)">
+      </app-button>
+    </ng-container>
+  </div>
+  <div class="app__description" *ngIf="playerChoice">{{gameText.playerSelection}} {{playerChoice}}</div>
+  <div class="app__error" *ngIf="displayPickOneText">{{gameText.pickOneText}}</div>
+  <div class="app__buttons">
+    <app-button label="Play"
+                imagePath="../assets/Play-50.png"
+                class="app__button"
+                [buttonType]="'secondary'"
+                (click)="onPlay()">
+    </app-button>
+  </div>
+  <div class="app__error" *ngIf="game.apiFailure">{{gameText.apiFailure}}</div>
+  <div class="app__result" *ngIf="displayResult">
+    <div class="app__text app__text--value">{{gameText.gameResults}}</div>
+    <hr/>
+    <ng-container *ngIf="!playerChoice && !game.apiFailure">
+      <div class="app__text">
+        <span class="app__text app__text--label">{{gameText.playerChoice}}</span>
+        <span class="app__text app__text--value">{{game.playerChoice}}</span>
+      </div>
+      <div class="app__text">
+        <span class="app__text app__text--label">{{gameText.computerChoice}}</span>
+        <span class="app__text app__text--value">{{game.computerChoice}}</span>
+      </div>
+      <div class="app__text">
+        <span class="app__text app__text--label">{{gameText.results}}</span>
+        <span class="app__text app__text--value">{{game.result}}</span>
+      </div>
+      <hr/>
+    </ng-container>
+    <div class="app__text">
+      <span class="app__text app__text--label">{{gameText.playerScore}}</span>
+      <span class="app__text app__text--value">{{game.playerScore}}</span>
+    </div>
+    <div class="app__text">
+      <span class="app__text app__text--label">{{gameText.computerScore}}</span>
+      <span class="app__text app__text--value">{{game.computerScore}}</span>
+    </div>
+  </div>
 </div>
-<!-- Build out your angular code here! -->
